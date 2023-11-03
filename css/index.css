@@ -1,0 +1,192 @@
+/* Font */
+@font-face {
+    font-family: HankenGrotesk, sans-serif;
+    src: url("..assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+/* Global */
+:root{
+    /* Sizes */
+    --font-size-base: 18px;
+    /* Fonts */
+    --font-family-base: "HankenGrotesk", sans-serif;
+    /* Primary */
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --lightRedLight: hsl(0, 100%, 97%);
+    --orangeYellowLight: hsl(39, 100%, 97%);
+    --greenTealLight: hsl(166, 100%, 97%);
+    --cobaltBlueLight: hsl(234, 85%, 97%);
+    /* Gradients */
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --lightRoyalBlueCircle: hsla(241, 81%, 54%, 0);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+}
+/* Style */
+/* m:375 d:1440 */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.results__wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.results__header{
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+    background: linear-gradient(180deg, var(--lightSlateBlue) 0%, var(--lightRoyalBlue) 100%);
+    color: var(--lightLavender);
+}
+.results__title{
+    text-transform: capitalize;
+    font-size: .95rem;
+}
+.results__circle{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, var(--lightRoyalBlue)0%, var(--lightRoyalBlueCircle) 100%);
+    margin: 25px auto;
+    padding: 30px 0;
+}
+.results__score{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 0 0 2px black;
+    color: var(--white);
+}
+.results__scale{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+}
+.results__opinion{
+    font-size: 1.3rem;
+    color: var(--white);
+}
+.results__range{
+    font-size: .85rem;
+    width: 80%;
+    margin: 15px auto;
+}
+.results__rows{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.results__row{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px 15px;
+}
+.results__names{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.results__name{
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.results__reaction{
+    color: var(--lightRed);
+    background-color: var(--lightRedLight);
+}
+.results__memory{
+    color: var(--orangeYellow);
+    background-color: var(--orangeYellowLight);
+}
+.results__verbal{
+    color: var(--greenTeal);
+    background-color: var(--greenTealLight);
+}
+.results__visual{
+    color: var(--cobaltBlue);
+    background-color: var(--cobaltBlueLight);
+}
+.results__num{
+    font-size: .85rem;
+    color: var(--lightLavender);
+}
+.results__span{
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--darkGrayBlue);
+}
+.results__btn{
+    padding: 18px 0;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(180deg, var(--darkGrayBlue) 0%, var(--darkGrayBlue) 100%);
+    color: var(--white);
+    letter-spacing: 1px;
+}
+.results__btn:hover{
+    background: linear-gradient(180deg, var(--lightSlateBlue) 0%, var(--lightRoyalBlue) 100%);
+}
+/* Media Queries */
+@media (min-width: 700px){
+    .results__wrap{
+        flex-direction: row;
+        max-width: 1440px;
+        border-radius: 50px;
+    }
+    .results__header{
+        border-radius: 50px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .results__rows{
+        width: 50%;
+        padding: 50px 20px;
+    }
+    .results__title{
+        font-size: 1.1rem;
+    }
+    .results__circle{
+        width: 160px;
+        height: 160px;
+    }
+    .results__score{
+        font-size: 3.1rem;
+    }
+    .results__opinion{
+        font-size: 1.7rem;
+    }
+    .results__range{
+        font-size: 0.95rem;
+    }
+}

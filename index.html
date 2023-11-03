@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="page__wrap">
+      <div class="results__wrap">
+        <div class="results__header">
+          <p class="results__title">Your result</p>
+          <div class="results__circle">
+            <p class="results__score" id="results__score"></p>
+            <p class="results__scale">of 100</p>
+          </div>
+          <h2 class="results__opinion" id="results__opinion"></h2>
+          <p class="results__range">
+            You scored higher than
+            <span class="results__range" id="results__range"></span>% of the
+            people who have taken these tests.
+          </p>
+        </div>
+        <div class="results__rows">
+          <h3>Summary</h3>
+          <div class="results__row results__reaction">
+            <div class="results__names">
+              <img id="reactionIcon" src="" alt="" />
+              <p class="results__name" id="resultsReaction"></p>
+            </div>
+            <div class="results__nums">
+              <p class="results__num">
+                <span class="results__span" id="resultsReactionNum"></span> /
+                100
+              </p>
+            </div>
+          </div>
+          <div class="results__row results__memory">
+            <div class="results__names">
+              <img id="memoryIcon" src="" alt="" />
+              <p class="results__name" id="resultsMemory"></p>
+            </div>
+            <div class="results__nums">
+              <p class="results__num">
+                <span class="results__span" id="resultsMemoryNum"></span> / 100
+              </p>
+            </div>
+          </div>
+          <div class="results__row results__verbal">
+            <div class="results__names">
+              <img id="verbalIcon" src="" alt="" />
+              <p class="results__name" id="resultsVerbal"></p>
+            </div>
+            <div class="results__nums">
+              <p class="results__num">
+                <span class="results__span" id="resultsVerbalNum"></span> / 100
+              </p>
+            </div>
+          </div>
+          <div class="results__row results__visual">
+            <div class="results__names">
+              <img id="visualIcon" src="" alt="" />
+              <p class="results__name" id="resultsVisual"></p>
+            </div>
+            <div class="results__nums">
+              <p class="results__num">
+                <span class="results__span" id="resultsVisualNum"></span> / 100
+              </p>
+            </div>
+          </div>
+          <button class="results__btn">Continue</button>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://tubiz.pl">Mateusz Gacek</a>.
+      </div>
+    </div>
+    <script type="module" src="js/results.js"></script>
+  </body>
+</html>
